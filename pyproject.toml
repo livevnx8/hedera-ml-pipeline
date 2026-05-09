@@ -1,0 +1,38 @@
+[project]
+name = "hedera-ml-pipeline"
+version = "0.1.0"
+description = "Hedera-native data and risk infrastructure for AI agents."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "livevnx8" }
+]
+keywords = [
+  "hedera",
+  "mirror-node",
+  "hcs",
+  "agents",
+  "risk-management",
+  "machine-learning"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+  "aiohttp>=3.9.0",
+  "numpy>=1.24.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/livevnx8/hedera-ml-pipeline"
+Repository = "https://github.com/livevnx8/hedera-ml-pipeline"
+Issues = "https://github.com/livevnx8/hedera-ml-pipeline/issues"
+
+[tool.setuptools]
+packages = ["src"]

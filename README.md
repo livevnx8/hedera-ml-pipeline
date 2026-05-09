@@ -4,6 +4,17 @@ Hedera-native data and risk infrastructure for AI agents.
 
 This project turns public Hedera Mirror Node data into structured metrics that agent systems can use for research, monitoring, signal generation, dashboards, and risk-aware automation.
 
+## Product Snapshot
+
+| Area | Included |
+| --- | --- |
+| Data access | Async Hedera Mirror Node client |
+| Metrics | Staking, supply, transaction activity, HCS-ready signal parsing |
+| Agents | Network health and risk gate examples |
+| Risk | Kelly sizing, fixed-fraction sizing, stop-loss, take-profit, daily limits |
+| Validation | Live examples, syntax checks, documented limitations |
+| Boundary | Public tooling only; private runtime state and QVX/Veda internals excluded |
+
 ## What It Does
 
 - Reads public Hedera Mirror Node endpoints with an async Python client.
@@ -84,6 +95,8 @@ For runnable agent-style examples:
 python3 examples/network_health_agent.py
 python3 examples/risk_gate_agent.py
 ```
+
+See [examples/README.md](examples/README.md) for the full examples index.
 
 ## Documentation
 
