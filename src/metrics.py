@@ -4,6 +4,7 @@ Processes raw Mirror Node data into actionable trading metrics.
 """
 
 import asyncio
+import base64
 import json
 from datetime import datetime
 from typing import Dict, Any, Optional, List
@@ -118,15 +119,23 @@ class HederaOnChainMetrics:
         signals = []
         for msg in all_messages:
             raw = msg.get("message", "")
+            decoded = raw
+            if isinstance(raw, str):
+                try:
+                    decoded = base64.b64decode(raw).decode("utf-8")
+                except Exception:
+                    decoded = raw
+
             try:
-                content = json.loads(raw)
+                content = json.loads(decoded)
             except (json.JSONDecodeError, TypeError):
-                content = raw
+                content = decoded
 
             signals.append({
                 "topic_id": msg.get("topic_id"),
                 "sequence_number": msg.get("sequence_number"),
                 "content": content,
+                "raw_message": raw,
                 "timestamp": msg.get("consensus_timestamp"),
             })
 

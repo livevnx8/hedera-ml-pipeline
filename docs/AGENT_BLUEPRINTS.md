@@ -65,7 +65,7 @@ These blueprints are intentionally narrow: they use public data, avoid private k
 - Provenance metadata
 - Agent-ready context records
 
-**Status:** The base Mirror Node topic method exists. Schema validation and richer message decoding are planned.
+**Status:** The base Mirror Node topic method exists and decodes base64 messages before parsing JSON/text content. Schema validation, chunk reconstruction, and topic-specific trust rules are planned.
 
 ## 4. Treasury Monitor Agent
 
@@ -119,3 +119,11 @@ These blueprints are intentionally narrow: they use public data, avoid private k
 - Risk gates should be separate from signal generation.
 - Mirror Node data should be cached or rate-limited for production use.
 - QVX/Veda runtime internals stay outside this public repository.
+
+## Validation
+
+Runnable examples are documented in [../VALIDATION.md](../VALIDATION.md). Current public examples cover live metrics snapshots, a network health agent, and a risk gate agent.
+
+## Limitations
+
+Known limitations are documented in [../LIMITATIONS.md](../LIMITATIONS.md), including HCS schema validation, chunked messages, production monitoring, and the boundary between this public repo and in-house QVX/Veda systems.

@@ -90,6 +90,8 @@ python3 examples/risk_gate_agent.py
 - [Getting Started](GETTING_STARTED.md)
 - [Use Cases](USE_CASES.md)
 - [Advantages](ADVANTAGES.md)
+- [Validation](VALIDATION.md)
+- [Limitations](LIMITATIONS.md)
 - [Agent Blueprints](docs/AGENT_BLUEPRINTS.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [API Reference](docs/API_REFERENCE.md)
@@ -119,6 +121,8 @@ See [docs/BENCHMARKS.md](docs/BENCHMARKS.md) for details and test conditions.
 This is research and developer tooling. It is not financial advice and does not guarantee trading performance.
 
 The included demo does not require private keys. Do not connect production funds, private endpoints, wallet files, or exchange credentials without independent review and appropriate controls.
+
+Known limitations are documented in [LIMITATIONS.md](LIMITATIONS.md). Validation commands are documented in [VALIDATION.md](VALIDATION.md).
 
 QVX/Veda remains in-house technology. This repository is the public Hedera tooling layer and should stay clean of internal runtime files, secrets, generated model artifacts, logs, and deployment state. See [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md).
 

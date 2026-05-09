@@ -248,11 +248,13 @@ Returns messages from an HCS topic.
 }
 ```
 
-**Note:** The `message` field is base64-encoded. Decode before use:
+**Note:** The `message` field is base64-encoded. Decode before JSON parsing or text processing:
 ```python
 import base64
 decoded = base64.b64decode(msg["message"]).decode("utf-8")
 ```
+
+`HederaOnChainMetrics.get_hcs_signals()` performs this decode step and returns both `content` and `raw_message`.
 
 ---
 

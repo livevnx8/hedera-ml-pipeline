@@ -25,12 +25,26 @@ python3 demo.py
 python3 examples/live_metrics_snapshot.py
 ```
 
+## Run Agent Examples
+
+```bash
+python3 examples/network_health_agent.py
+python3 examples/risk_gate_agent.py
+```
+
+## Validate The Repo
+
+```bash
+python3 -m py_compile demo.py examples/live_metrics_snapshot.py examples/network_health_agent.py examples/risk_gate_agent.py src/mirror_node.py src/metrics.py src/position_sizing.py src/risk_management.py
+```
+
 ## Expected Result
 
-The demo prints live Hedera network metrics, example position sizing, and risk-management output. The JSON snapshot example prints a structured object that can be reused by dashboards, notebooks, agents, or API prototypes.
+The demo prints live Hedera network metrics, example position sizing, and risk-management output. The JSON snapshot example prints a structured object that can be reused by dashboards, notebooks, agents, or API prototypes. The agent examples print structured JSON reports for network health and risk-gate decisions.
 
 ## Next Steps
 
 - Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - Review [docs/FINDINGS.md](docs/FINDINGS.md)
+- Review [VALIDATION.md](VALIDATION.md) and [LIMITATIONS.md](LIMITATIONS.md)
 - Inspect `src/mirror_node.py`, `src/metrics.py`, `src/position_sizing.py`, and `src/risk_management.py`
