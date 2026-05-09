@@ -89,6 +89,17 @@ python3 -m pip install -r requirements.txt
 python3 demo.py
 ```
 
+Developer/test setup:
+
+```bash
+git clone https://github.com/livevnx8/hedera-ml-pipeline.git
+cd hedera-ml-pipeline
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -e ".[dev]"
+pytest
+```
+
 The demo reads live public Hedera data and prints network metrics, example sizing output, and risk-management output.
 
 ## Live Data Example

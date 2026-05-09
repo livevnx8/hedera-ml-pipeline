@@ -16,6 +16,19 @@ bash setup.sh
 source .venv/bin/activate
 ```
 
+## Test Install
+
+```bash
+python3 -m pip install -e ".[dev]"
+pytest
+```
+
+The test suite covers deterministic logic that does not require network access:
+
+- Position sizing
+- Risk management gates
+- Agent report formatting
+
 ## Live Examples
 
 These commands use public Hedera mainnet Mirror Node endpoints. No private keys or API keys are required.
