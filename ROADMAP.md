@@ -15,7 +15,7 @@
 - Public boundary, limitations, security, support, changelog, and extension docs
 - GitHub CI workflow, issue templates, and PR template
 
-## Phase 1: Trust + Release Hardening (In Progress)
+## Phase 1: Trust + Release Hardening (Complete)
 
 - CI workflow running pytest and syntax checks on push/PR
 - README badges for CI, Python version, license, and status
@@ -23,7 +23,7 @@
 - Pull request template with validation checklist
 - Updated ROADMAP and CONTRIBUTING for phased direction
 
-## Phase 2: Hedera Agent Feature Expansion (Next)
+## Phase 2: Hedera Agent Feature Expansion (Complete)
 
 - HCS signal watcher example
 - Treasury monitor example
@@ -31,7 +31,7 @@
 - Expanded agent blueprint input/output documentation
 - Offline tests for new formatting/parsing helpers
 
-## Phase 3: Hosted API / Demo Path (Later)
+## Phase 3: Hosted API / Demo Path (Complete)
 
 - Optional FastAPI extra dependency group
 - Minimal API app with `/health`, `/metrics`, `/risk-gate` endpoints
