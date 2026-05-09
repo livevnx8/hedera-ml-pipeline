@@ -27,6 +27,8 @@ The test suite covers deterministic logic that does not require network access:
 
 - Position sizing
 - Risk management gates
+- HCS message decoding
+- Mirror Node network validation
 - Agent report formatting
 
 ## Live Examples

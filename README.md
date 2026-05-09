@@ -18,10 +18,18 @@ This project turns public Hedera Mirror Node data into structured metrics that a
 ## What It Does
 
 - Reads public Hedera Mirror Node endpoints with an async Python client.
+- Exposes a clean `hedera_ml_pipeline` library API for adopters.
 - Aggregates staking, supply, transaction, and HCS-oriented metrics.
 - Provides position sizing helpers using Kelly and fixed-fraction approaches.
 - Provides risk-management helpers for stops, take-profit levels, daily limits, and position caps.
 - Documents benchmark results and lessons from ML leakage testing.
+
+## Who This Is For
+
+- Hedera builders who need public Mirror Node data in Python.
+- Agent developers who need structured network context.
+- Dashboard builders who need clean metrics snapshots.
+- Research users who want reproducible examples and honest limitations.
 
 ## Why Hedera
 
@@ -94,6 +102,16 @@ from hedera_ml_pipeline import HederaMirrorNodeClient, HederaOnChainMetrics
 
 See [docs/LIBRARY_API.md](docs/LIBRARY_API.md) for copy-paste API examples.
 
+Smallest API example:
+
+```python
+import asyncio
+from hedera_ml_pipeline import get_live_metrics
+
+snapshot = asyncio.run(get_live_metrics())
+print(snapshot["staking"])
+```
+
 ### Manual setup
 
 ```bash
@@ -151,6 +169,9 @@ See [examples/README.md](examples/README.md) for the full examples index.
 - [Benchmarks](docs/BENCHMARKS.md)
 - [Research Findings](docs/FINDINGS.md)
 - [Public Boundary](PUBLIC_BOUNDARY.md)
+- [Extending](EXTENDING.md)
+- [Changelog](CHANGELOG.md)
+- [Support](SUPPORT.md)
 - [Roadmap](ROADMAP.md)
 - [Security](SECURITY.md)
 - [Contributing](CONTRIBUTING.md)

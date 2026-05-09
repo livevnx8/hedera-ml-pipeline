@@ -33,6 +33,18 @@ from hedera_ml_pipeline import (
 
 ## Fetch Live Hedera Metrics
 
+Smallest path:
+
+```python
+import asyncio
+from hedera_ml_pipeline import get_live_metrics
+
+snapshot = asyncio.run(get_live_metrics())
+print(snapshot["staking"])
+```
+
+Manual client path:
+
 ```python
 import asyncio
 from hedera_ml_pipeline import HederaMirrorNodeClient, HederaOnChainMetrics
@@ -46,6 +58,17 @@ async def main():
 
 
 asyncio.run(main())
+```
+
+Expected top-level response shape:
+
+```python
+{
+    "staking": {...},
+    "supply": {...},
+    "transactions": {...},
+    "hcs": {...},  # only when hcs_topic_ids are provided
+}
 ```
 
 ## Size A Position
@@ -100,3 +123,9 @@ asyncio.run(main())
 ```
 
 HCS topic messages are base64-decoded before JSON/text parsing. Schema validation and chunk reconstruction are planned but not included yet.
+
+## Error Handling
+
+Mirror Node HTTP errors are raised by `aiohttp` through `response.raise_for_status()`.
+
+For application use, wrap live calls in `try`/`except` and decide whether to retry, degrade gracefully, or surface the error to an operator.

@@ -11,6 +11,8 @@ It is designed to be safe to read, run, fork, and build on without exposing priv
 - Position sizing and risk-management helpers
 - Live public-data examples
 - Documentation for Hedera agent use cases
+- Public `hedera_ml_pipeline` library API
+- Offline tests for deterministic library behavior
 
 ## Kept Separate
 
@@ -35,3 +37,9 @@ Future public APIs should expose narrow, useful Hedera capabilities:
 - Sanitized agent explanations
 
 Those APIs should not expose private runtime internals, live operational strategy, or sensitive account data.
+
+## Public API Rule
+
+Public adopters should import from `hedera_ml_pipeline`, not from internal implementation modules.
+
+If a feature is intended for external use, document it in [docs/LIBRARY_API.md](docs/LIBRARY_API.md), test it, and keep its behavior stable.

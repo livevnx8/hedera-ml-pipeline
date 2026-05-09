@@ -4,6 +4,7 @@ import hedera_ml_pipeline as hmp
 def test_public_api_exports_core_classes():
     assert hmp.HederaMirrorNodeClient is not None
     assert hmp.HederaOnChainMetrics is not None
+    assert hmp.get_live_metrics is not None
     assert hmp.KellyCriterionSizing is not None
     assert hmp.FixedFractionSizing is not None
     assert hmp.RiskManagement is not None
