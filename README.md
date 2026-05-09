@@ -180,6 +180,7 @@ See [examples/README.md](examples/README.md) for the full examples index.
 - [Roadmap](ROADMAP.md)
 - [Security](SECURITY.md)
 - [Contributing](CONTRIBUTING.md)
+- [Hosted API](docs/API_HOSTED.md)
 
 ## Benchmarks
 
