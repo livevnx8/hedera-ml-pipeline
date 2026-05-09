@@ -22,11 +22,13 @@ This pipeline starts with Hedera-specific primitives instead of generic exchange
 
 - On-chain intelligence agents that monitor network state.
 - HCS signal pipelines that coordinate shared context.
+- Network health agents that summarize staking, supply, and recent transaction activity.
+- Risk gate agents that approve or block proposed actions before execution.
 - Operator dashboards that explain network and execution state.
 - Risk-aware execution systems that separate signal confidence from action permission.
 - Research pipelines that combine Hedera metrics with model, rule, or LLM reasoning.
 
-See [USE_CASES.md](USE_CASES.md) for a fuller map.
+See [USE_CASES.md](USE_CASES.md) and [docs/AGENT_BLUEPRINTS.md](docs/AGENT_BLUEPRINTS.md) for a fuller map.
 
 ## Architecture
 
@@ -76,11 +78,19 @@ python3 examples/live_metrics_snapshot.py
 
 That output is meant to be easy to feed into dashboards, agent prompts, notebooks, or API prototypes.
 
+For runnable agent-style examples:
+
+```bash
+python3 examples/network_health_agent.py
+python3 examples/risk_gate_agent.py
+```
+
 ## Documentation
 
 - [Getting Started](GETTING_STARTED.md)
 - [Use Cases](USE_CASES.md)
 - [Advantages](ADVANTAGES.md)
+- [Agent Blueprints](docs/AGENT_BLUEPRINTS.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [API Reference](docs/API_REFERENCE.md)
 - [Benchmarks](docs/BENCHMARKS.md)
@@ -117,6 +127,7 @@ QVX/Veda remains in-house technology. This repository is the public Hedera tooli
 - Hedera Mirror Node async client: complete
 - On-chain metrics aggregation: complete
 - Position sizing and risk helpers: complete
+- Network health and risk gate agent examples: complete
 - HCS signal parsing with schema validation: next
 - Backtesting and dashboard examples: next
 - Selected integrations with in-house QVX/Veda-backed tools and APIs: later
