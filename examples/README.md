@@ -42,6 +42,45 @@ The output includes:
 - Portfolio fraction
 - Stop-loss and take-profit levels
 
+## HCS Signal Watcher
+
+```bash
+python3 examples/hcs_signal_watcher.py 0.0.12345
+```
+
+Fetches and decodes HCS topic messages from Hedera mainnet.
+
+Output includes:
+
+- Topic IDs
+- Signal count
+- Decoded signals with content
+- Timestamp
+
+## Treasury Monitor
+
+```bash
+python3 examples/treasury_monitor.py 0.0.12345
+```
+
+Monitors a Hedera account balance and recent transaction activity from mainnet.
+
+Output includes:
+
+- Account ID
+- Balance in HBAR
+- Key expiry
+- Auto-renew period
+- Recent transaction count
+
+## Dashboard Export
+
+```bash
+python3 examples/dashboard_export.py
+```
+
+Emits a stable JSON metrics snapshot suitable for dashboards, APIs, or notebooks.
+
 ## Notes
 
 - These examples are developer tooling, not financial advice.

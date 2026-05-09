@@ -55,45 +55,74 @@ These blueprints are intentionally narrow: they use public data, avoid private k
 **Goal:** Read HCS topic messages and convert them into structured context for an agent system.
 
 **Inputs:**
-- Topic IDs
-- Recent topic messages
-- Sequence numbers
-- Consensus timestamps
+- Topic IDs (list of strings, e.g., `["0.0.12345"]`)
 
 **Outputs:**
-- Parsed signal candidates
-- Provenance metadata
-- Agent-ready context records
+```python
+{
+    "agent": "hcs_signal_watcher",
+    "topics": ["0.0.12345"],
+    "signal_count": 1,
+    "signals": [
+        {
+            "topic_id": "0.0.12345",
+            "sequence_number": 1,
+            "content": {"signal": "watch", "score": 0.75},
+            "raw_message": "...",
+            "timestamp": "1714953600.123456789"
+        }
+    ],
+    "timestamp": "2026-05-09T..."
+}
+```
 
 **Status:** The base Mirror Node topic method exists and decodes base64 messages before parsing JSON/text content. Schema validation, chunk reconstruction, and topic-specific trust rules are planned.
+
+**Starter:** `examples/hcs_signal_watcher.py`
 
 ## 4. Treasury Monitor Agent
 
 **Goal:** Watch selected Hedera accounts or token balances and summarize treasury state.
 
 **Inputs:**
-- Account balances
-- Token balances
-- Recent transfers
+- Account ID (string, e.g., `"0.0.12345"`)
 
 **Outputs:**
-- Balance summaries
-- Transfer activity notes
-- Optional alert events for dashboards
+```python
+{
+    "agent": "treasury_monitor",
+    "account_id": "0.0.12345",
+    "balance": 12345.67,
+    "key_expiry": 1714953600,
+    "auto_renew_period": 7776000,
+    "recent_tx_count": 5,
+    "timestamp": "2026-05-09T..."
+}
+```
 
 **Status:** Account and token endpoints exist in `src/mirror_node.py`. A dedicated example can be added next.
+
+**Starter:** `examples/treasury_monitor.py`
 
 ## 5. Public Metrics API Agent
 
 **Goal:** Serve a minimal public JSON endpoint for Hedera metrics without exposing internal infrastructure.
 
 **Inputs:**
-- `HederaOnChainMetrics.get_all_metrics()`
+- Network (string, default `"mainnet"`)
 
 **Outputs:**
-- JSON snapshot for dashboards, notebooks, and lightweight integrations
+```python
+{
+    "staking": {...},
+    "supply": {...},
+    "transactions": {...}
+}
+```
 
-**Starter:** `examples/live_metrics_snapshot.py`
+**Status:** `get_live_metrics()` convenience helper exists in the public API.
+
+**Starter:** `examples/dashboard_export.py`
 
 ## 6. Research Agent
 
