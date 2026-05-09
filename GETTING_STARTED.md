@@ -5,12 +5,32 @@
 - Python 3.12+
 - Internet access for Hedera Mirror Node public endpoints
 
-## Install
+## Option 1: One-Command Setup
+
+From inside the repository:
+
+```bash
+bash setup.sh
+source .venv/bin/activate
+python3 demo.py
+```
+
+The setup script creates `.venv`, installs dependencies, and runs a syntax check.
+
+## Option 2: Manual Setup
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
+```
+
+## Option 3: Editable Python Install
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -e .
 ```
 
 ## Run The Demo

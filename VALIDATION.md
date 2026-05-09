@@ -6,7 +6,14 @@ This repository includes lightweight validation commands that can be run before 
 
 ```bash
 python3 --version
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
+```
+
+## Setup Check
+
+```bash
+bash setup.sh
+source .venv/bin/activate
 ```
 
 ## Live Examples

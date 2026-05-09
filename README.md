@@ -68,12 +68,24 @@ More detail is available in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Quick Start
 
+Fastest setup:
+
+```bash
+git clone https://github.com/livevnx8/hedera-ml-pipeline.git
+cd hedera-ml-pipeline
+bash setup.sh
+source .venv/bin/activate
+python3 demo.py
+```
+
+Manual setup:
+
 ```bash
 git clone https://github.com/livevnx8/hedera-ml-pipeline.git
 cd hedera-ml-pipeline
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 python3 demo.py
 ```
 
