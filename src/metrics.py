@@ -10,6 +10,7 @@ from datetime import datetime
 from typing import Dict, Any, Optional, List
 
 from .mirror_node import HederaMirrorNodeClient
+from .hcs_schemas import validate_hcs_signal
 
 
 class HederaOnChainMetrics:
@@ -95,16 +96,19 @@ class HederaOnChainMetrics:
             "timestamp": datetime.now().isoformat(),
         }
 
-    async def get_hcs_signals(self, topic_ids: List[str]) -> Dict[str, Any]:
+    async def get_hcs_signals(
+        self, topic_ids: List[str], validate_schemas: bool = True
+    ) -> Dict[str, Any]:
         """
         Fetch and parse HCS topic messages.
 
         Args:
             topic_ids: List of HCS topic IDs to query.
+            validate_schemas: If True, validate parsed content against known schemas.
 
         Returns:
             Dict with:
-            - signals: Parsed messages
+            - signals: Parsed messages with optional validation results
             - signal_count: Number of signals found
         """
         all_messages = []
@@ -131,13 +135,19 @@ class HederaOnChainMetrics:
             except (json.JSONDecodeError, TypeError):
                 content = decoded
 
-            signals.append({
+            signal = {
                 "topic_id": msg.get("topic_id"),
                 "sequence_number": msg.get("sequence_number"),
                 "content": content,
                 "raw_message": raw,
                 "timestamp": msg.get("consensus_timestamp"),
-            })
+            }
+
+            if validate_schemas and isinstance(content, dict):
+                validation = validate_hcs_signal(content)
+                signal["validation"] = validation
+
+            signals.append(signal)
 
         return {
             "signals": signals,

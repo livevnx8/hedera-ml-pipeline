@@ -122,7 +122,13 @@ async def main():
 asyncio.run(main())
 ```
 
-HCS topic messages are base64-decoded before JSON/text parsing. Schema validation and chunk reconstruction are planned but not included yet.
+HCS topic messages are base64-decoded before JSON/text parsing. Schema validation is enabled by default and will validate parsed content against known schemas (simple_signal, price_signal, health_signal). Validation results are included in each signal's `validation` field.
+
+To disable schema validation:
+
+```python
+signals = await metrics.get_hcs_signals(["0.0.12345"], validate_schemas=False)
+```
 
 ## Error Handling
 
