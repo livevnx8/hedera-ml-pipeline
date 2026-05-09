@@ -1,9 +1,9 @@
 # Hedera ML Pipeline
 
-[![CI](https://github.com/livevnx8/hedera-ml-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/livevnx8/hedera-ml-pipeline/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/python-3.12%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-public%20library%20MVP-purple)
+![Status](assets/badges/status.svg)
+![Python](assets/badges/python.svg)
+![License](assets/badges/license.svg)
+![CI](https://github.com/livevnx8/hedera-ml-pipeline/actions/workflows/ci.yml/badge.svg)
 
 Hedera-native data and risk infrastructure for AI agents.
 
@@ -76,6 +76,8 @@ Agent / model / rule engine
         v
 Position sizing + risk gates
 ```
+
+![Architecture Diagram](docs/architecture.svg)
 
 More detail is available in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 

@@ -1,0 +1,27 @@
+graph TD
+    A[Hedera Mirror Node] --> B[HederaMirrorNodeClient]
+    B --> C[HederaOnChainMetrics]
+    C --> D[Staking Metrics]
+    C --> E[Supply Metrics]
+    C --> F[Transaction Metrics]
+    C --> G[HCS Signals]
+    C --> H[Agent / Model / Rule Engine]
+    H --> I[Position Sizing]
+    H --> J[Risk Gates]
+    I --> K[Dashboard]
+    I --> L[API]
+    J --> K
+    J --> L
+
+    style A fill:#00bfa5,stroke:#004d40,stroke-width:2px
+    style B fill:#e0e0e0,stroke:#424242,stroke-width:2px
+    style C fill:#e0e0e0,stroke:#424242,stroke-width:2px
+    style D fill:#fff9c4,stroke:#f57f17,stroke-width:1px
+    style E fill:#fff9c4,stroke:#f57f17,stroke-width:1px
+    style F fill:#fff9c4,stroke:#f57f17,stroke-width:1px
+    style G fill:#fff9c4,stroke:#f57f17,stroke-width:1px
+    style H fill:#e0e0e0,stroke:#424242,stroke-width:2px
+    style I fill:#b3e5fc,stroke:#0277bd,stroke-width:1px
+    style J fill:#b3e5fc,stroke:#0277bd,stroke-width:1px
+    style K fill:#c8e6c9,stroke:#2e7d32,stroke-width:1px
+    style L fill:#c8e6c9,stroke:#2e7d32,stroke-width:1px

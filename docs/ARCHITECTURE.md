@@ -4,6 +4,8 @@ System design and component relationships for the Hedera ML Pipeline.
 
 ## High-Level Design
 
+![Architecture Diagram](architecture.svg)
+
 ```
                         Hedera Network
                              │

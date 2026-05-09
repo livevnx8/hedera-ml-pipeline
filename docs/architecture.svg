@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .box { fill: #f5f5f5; stroke: #333; stroke-width: 2; }
+      .hedera { fill: #00bfa5; stroke: #004d40; stroke-width: 3; }
+      .metrics { fill: #fff9c4; stroke: #f57f17; stroke-width: 1; }
+      .agent { fill: #e0e0e0; stroke: #424242; stroke-width: 2; }
+      .risk { fill: #b3e5fc; stroke: #0277bd; stroke-width: 1; }
+      .output { fill: #c8e6c9; stroke: #2e7d32; stroke-width: 1; }
+      .text { font-family: Arial, sans-serif; font-size: 14px; text-anchor: middle; }
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+      .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" class="title" style="font-size: 20px;">Hedera ML Pipeline Architecture</text>
+
+  <!-- Hedera Mirror Node -->
+  <rect x="300" y="60" width="200" height="50" class="hedera" rx="5" />
+  <text x="400" y="90" class="text" style="fill: white; font-weight: bold;">Hedera Mirror Node</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="110" x2="400" y2="140" class="arrow" />
+
+  <!-- HederaMirrorNodeClient -->
+  <rect x="300" y="140" width="200" height="50" class="agent" rx="5" />
+  <text x="400" y="170" class="text">HederaMirrorNodeClient</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="190" x2="400" y2="220" class="arrow" />
+
+  <!-- HederaOnChainMetrics -->
+  <rect x="300" y="220" width="200" height="50" class="agent" rx="5" />
+  <text x="400" y="250" class="text">HederaOnChainMetrics</text>
+
+  <!-- Arrows to metrics -->
+  <line x1="400" y1="270" x2="150" y2="300" class="arrow" />
+  <line x1="400" y1="270" x2="316" y2="300" class="arrow" />
+  <line x1="400" y1="270" x2="483" y2="300" class="arrow" />
+  <line x1="400" y1="270" x2="650" y2="300" class="arrow" />
+
+  <!-- Metrics boxes -->
+  <rect x="50" y="300" width="200" height="40" class="metrics" rx="5" />
+  <text x="150" y="325" class="text">Staking Metrics</text>
+
+  <rect x="266" y="300" width="100" height="40" class="metrics" rx="5" />
+  <text x="316" y="325" class="text">Supply</text>
+
+  <rect x="433" y="300" width="100" height="40" class="metrics" rx="5" />
+  <text x="483" y="325" class="text">Transactions</text>
+
+  <rect x="600" y="300" width="100" height="40" class="metrics" rx="5" />
+  <text x="650" y="325" class="text">HCS Signals</text>
+
+  <!-- Arrow to agent -->
+  <line x1="400" y1="340" x2="400" y2="370" class="arrow" />
+
+  <!-- Agent / Model / Rule Engine -->
+  <rect x="300" y="370" width="200" height="50" class="agent" rx="5" />
+  <text x="400" y="400" class="text">Agent / Model / Rule Engine</text>
+
+  <!-- Arrows to risk and sizing -->
+  <line x1="400" y1="420" x2="280" y2="450" class="arrow" />
+  <line x1="400" y1="420" x2="520" y2="450" class="arrow" />
+
+  <!-- Position Sizing -->
+  <rect x="180" y="450" width="200" height="40" class="risk" rx="5" />
+  <text x="280" y="475" class="text">Position Sizing</text>
+
+  <!-- Risk Gates -->
+  <rect x="420" y="450" width="200" height="40" class="risk" rx="5" />
+  <text x="520" y="475" class="text">Risk Gates</text>
+
+  <!-- Arrows to outputs -->
+  <line x1="280" y1="490" x2="280" y2="520" class="arrow" />
+  <line x1="280" y1="520" x2="350" y2="520" class="arrow" />
+  <line x1="520" y1="490" x2="520" y2="520" class="arrow" />
+  <line x1="520" y1="520" x2="450" y2="520" class="arrow" />
+
+  <!-- Outputs -->
+  <rect x="300" y="500" width="200" height="40" class="output" rx="5" />
+  <text x="400" y="525" class="text">Dashboard / API</text>
+
+</svg>

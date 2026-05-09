@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <style>
+      .box { fill: #f5f5f5; stroke: #333; stroke-width: 2; }
+      .hcs { fill: #00bfa5; stroke: #004d40; stroke-width: 3; }
+      .process { fill: #e0e0e0; stroke: #424242; stroke-width: 2; }
+      .output { fill: #c8e6c9; stroke: #2e7d32; stroke-width: 1; }
+      .text { font-family: Arial, sans-serif; font-size: 14px; text-anchor: middle; }
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+      .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <text x="300" y="30" class="title" style="font-size: 20px;">HCS Signal Flow</text>
+
+  <rect x="200" y="60" width="200" height="50" class="hcs" rx="5" />
+  <text x="300" y="90" class="text" style="fill: white; font-weight: bold;">HCS Topic</text>
+
+  <line x1="300" y1="110" x2="300" y2="140" class="arrow" />
+
+  <rect x="200" y="140" width="200" height="50" class="process" rx="5" />
+  <text x="300" y="170" class="text">Fetch Messages</text>
+
+  <line x1="300" y1="190" x2="300" y2="220" class="arrow" />
+
+  <rect x="200" y="220" width="200" height="50" class="process" rx="5" />
+  <text x="300" y="250" class="text">Base64 Decode</text>
+
+  <line x1="300" y1="270" x2="300" y2="300" class="arrow" />
+
+  <rect x="200" y="300" width="200" height="50" class="process" rx="5" />
+  <text x="300" y="330" class="text">JSON Parse</text>
+
+  <line x1="300" y1="350" x2="300" y2="380" class="arrow" />
+
+  <rect x="200" y="380" width="200" height="50" class="output" rx="5" />
+  <text x="300" y="410" class="text">Validated Signal</text>
+
+</svg>

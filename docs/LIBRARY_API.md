@@ -90,6 +90,8 @@ print(position.risk_amount)
 
 ## Apply A Risk Gate
 
+![Risk Gate Flow](../docs/risk_gate_flow.svg)
+
 ```python
 from hedera_ml_pipeline import RiskManagement
 
@@ -106,6 +108,8 @@ if risk.should_open_position():
 ```
 
 ## HCS Signals
+
+![HCS Signal Flow](../docs/hcs_signal_flow.svg)
 
 ```python
 import asyncio
