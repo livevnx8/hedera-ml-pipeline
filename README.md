@@ -1,5 +1,10 @@
 # Hedera ML Pipeline
 
+[![CI](https://github.com/livevnx8/hedera-ml-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/livevnx8/hedera-ml-pipeline/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.12%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-public%20library%20MVP-purple)
+
 Hedera-native data and risk infrastructure for AI agents.
 
 This project turns public Hedera Mirror Node data into structured metrics that agent systems can use for research, monitoring, signal generation, dashboards, and risk-aware automation.
