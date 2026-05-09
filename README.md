@@ -68,7 +68,7 @@ More detail is available in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Quick Start
 
-Fastest setup:
+### Fastest setup
 
 ```bash
 git clone https://github.com/livevnx8/hedera-ml-pipeline.git
@@ -78,7 +78,23 @@ source .venv/bin/activate
 python3 demo.py
 ```
 
-Manual setup:
+### Use as a library
+
+```bash
+git clone https://github.com/livevnx8/hedera-ml-pipeline.git
+cd hedera-ml-pipeline
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -e .
+```
+
+```python
+from hedera_ml_pipeline import HederaMirrorNodeClient, HederaOnChainMetrics
+```
+
+See [docs/LIBRARY_API.md](docs/LIBRARY_API.md) for copy-paste API examples.
+
+### Manual setup
 
 ```bash
 git clone https://github.com/livevnx8/hedera-ml-pipeline.git
@@ -89,7 +105,7 @@ python3 -m pip install -r requirements.txt
 python3 demo.py
 ```
 
-Developer/test setup:
+### Developer/test setup
 
 ```bash
 git clone https://github.com/livevnx8/hedera-ml-pipeline.git
@@ -128,6 +144,7 @@ See [examples/README.md](examples/README.md) for the full examples index.
 - [Advantages](ADVANTAGES.md)
 - [Validation](VALIDATION.md)
 - [Limitations](LIMITATIONS.md)
+- [Library API](docs/LIBRARY_API.md)
 - [Agent Blueprints](docs/AGENT_BLUEPRINTS.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [API Reference](docs/API_REFERENCE.md)

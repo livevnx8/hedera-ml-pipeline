@@ -40,4 +40,4 @@ Repository = "https://github.com/livevnx8/hedera-ml-pipeline"
 Issues = "https://github.com/livevnx8/hedera-ml-pipeline/issues"
 
 [tool.setuptools]
-packages = ["src"]
+packages = ["hedera_ml_pipeline", "src"]

@@ -33,6 +33,14 @@ source .venv/bin/activate
 python3 -m pip install -e .
 ```
 
+Use the public library API:
+
+```python
+from hedera_ml_pipeline import HederaMirrorNodeClient, HederaOnChainMetrics
+```
+
+See [docs/LIBRARY_API.md](docs/LIBRARY_API.md) for copy-paste examples.
+
 ## Option 4: Developer Install With Tests
 
 ```bash
