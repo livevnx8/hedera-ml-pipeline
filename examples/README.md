@@ -106,6 +106,24 @@ streamlit run examples/streamlit_dashboard.py
 
 Interactive dashboard for visualizing Hedera metrics with auto-refresh.
 
+## Integration Examples
+
+### Pandas Integration
+
+```bash
+python3 examples/integration_pandas.py
+```
+
+Shows how to convert Hedera metrics into pandas DataFrames for data analysis.
+
+### LangChain Integration
+
+```bash
+python3 examples/integration_langchain.py
+```
+
+Shows how to use Hedera metrics as context for LangChain agents.
+
 ## Notes
 
 - These examples are developer tooling, not financial advice.
