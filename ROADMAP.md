@@ -38,6 +38,13 @@
 - API docs with curl examples
 - Keep hosted API optional and separate from core package
 
+## Phase 5: Hedera ML Pipeline Enhancements (Complete)
+
+- HCS schema validation with known schemas (simple_signal, price_signal, health_signal)
+- Backtesting examples for position sizing strategies
+- Token metrics example for supply and distribution data
+- Streamlit dashboard template for interactive visualization
+
 ## Phase 4: Profile and Ecosystem Polish (Later)
 
 - Publish or update `livevnx8/livevnx8` profile README

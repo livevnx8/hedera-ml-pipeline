@@ -81,6 +81,31 @@ python3 examples/dashboard_export.py
 
 Emits a stable JSON metrics snapshot suitable for dashboards, APIs, or notebooks.
 
+## Backtesting Example
+
+```bash
+python3 examples/backtest_sizing.py
+```
+
+Demonstrates backtesting Kelly Criterion and fixed-fraction position sizing strategies using historical price data.
+
+## Token Metrics
+
+```bash
+python3 examples/token_metrics.py 0.0.12345
+```
+
+Fetches token supply and distribution metrics from Hedera mainnet.
+
+## Streamlit Dashboard
+
+```bash
+python3 -m pip install -e ".[dashboard]"
+streamlit run examples/streamlit_dashboard.py
+```
+
+Interactive dashboard for visualizing Hedera metrics with auto-refresh.
+
 ## Notes
 
 - These examples are developer tooling, not financial advice.
